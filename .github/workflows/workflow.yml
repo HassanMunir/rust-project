@@ -22,3 +22,8 @@ jobs:
           toolchain: stable
           override: true
           
+      - name: Run Clippy (Rust Linter)
+        run: |
+          cd rust
+          cargo clippy --all-targets --all-features
+          
