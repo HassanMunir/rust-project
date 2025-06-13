@@ -73,3 +73,8 @@ jobs:
           format: spdx-json
           upload-artifact: true
           upload-release-assets: true
+
+      - name: Push Docker Image to GHCR
+        run: |
+          docker push $IMAGE_TAG
+          docker push $IMAGE_TAG_LATEST
