@@ -58,4 +58,4 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t $IMAGE_TAG -t $IMAGE_TAG_LATEST .
+          docker build -t $IMAGE_TAG -t $IMAGE_TAG_LATEST -f rust/Dockerfile rust/
