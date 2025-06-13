@@ -65,3 +65,11 @@ jobs:
         with:
           image: '${{ env.IMAGE_TAG_LATEST }}'
           fail-build: false
+
+      - uses: anchore/sbom-action@v0
+        with:
+          image: '${{ env.IMAGE_TAG_LATEST }}'
+          path: .
+          format: spdx-json
+          upload-artifact: true
+          upload-release-assets: true
