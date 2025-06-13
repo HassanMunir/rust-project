@@ -26,4 +26,13 @@ jobs:
         run: |
           cd rust
           cargo clippy --all-targets --all-features
-          
+
+      - name: Build Backend
+        run: |
+          cd rust
+          cargo build --release
+
+      - name: Run Tests
+        run: |
+          cd rust
+          cargo test --all --verbose
